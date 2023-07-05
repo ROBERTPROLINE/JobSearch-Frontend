@@ -21,13 +21,14 @@
     position: fixed;
     border: rgb(172, 172, 233) 2px solid;
     border-radius: 23px;
-    width: 530px;
+    width: 520px;
     height: 76%;
     background-color: aliceblue;
 }
 
 .applicant-profile img {
     border-radius: 800px;
+    margin-left: 25%;
 }
 
 .cover-letter textarea{
@@ -45,4 +46,51 @@
 
 .app-btns {
     display: flex;
+}
+
+
+.applicant-profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+}
+
+
+
+.selected-appl-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 60%;
+}
+
+
+
+#visit-profile {
+    align-self: center;
+}
+
+
+.applicant-profile-2 {
+    max-height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.applicant-profile-2 img {
+    align-self: center;
+    border-radius: 900px;
+}
+
+.selected-appl-bottom-skills {
+    display: flex;
+   flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.selected-appl-bottom-skills p {
+    margin-left: 10px;
+    font-weight: bold;
 }

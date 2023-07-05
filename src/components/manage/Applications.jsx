@@ -5,13 +5,32 @@ import { useState, useEffect } from "react";
 import SingleApp from "./Apps";
 import "../../css/applications.css";
 
-function FullApplication({ appl, user }) {
+function FullApplication({ appl, user, handleDelete }) {
+  const [skills, SetSkills] = useState([]);
+
+  useEffect(() => {
+    //console.log("appl on full app : ", appl);
+    //console.log("user on full app : ", user);
+    SetSkills(user.skills);
+  });
+
   function ShortList(e) {
     e.preventDefault();
+    axios
+      .post(`http://localhost:5000/infor/appl/${appl._id}`)
+      .then((response) => response.data)
+      .then((data) => {
+        handleDelete(e, user.userid);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }
 
   function Reject(e) {
     e.preventDefault();
+    console.log("deleting candidate : ", user.userid);
+    handleDelete(e, user.userid);
   }
 
   function Hire(e) {
@@ -20,40 +39,64 @@ function FullApplication({ appl, user }) {
 
   function VisitProfile(e) {
     e.preventDefault();
+    document.location = `/profile/${user.userid}`;
   }
+
+  if (!skills) return <></>;
   return (
     <>
-      <div hidden={!appl._id} className="selected-app">
+      <div hidden={!appl._id & !user.userid} className="selected-app">
         <div className="applicant-profile-2">
           <img
             width={"150px"}
             height={"120px"}
-            src={`http://localhost:5000/profilepicdl/${user._id}`}
+            src={`http://localhost:5000/profilepicdl/${user.userid}`}
             alt=""
           />
           <h3>{user.fullname}</h3>
+          <h4>{user.email}</h4>
           <h4>
             {user.experience} years experienced {user.profession}
           </h4>
         </div>
-        <button className="good">Visit Profile</button>
 
-        <div className="cover-letter2">
-          <textarea
-            disabled
-            hidden={!appl.cover_letter}
-            name=""
-            id=""
-            cols="60"
-            rows="10"
-            value={appl.cover_letter}
-          ></textarea>
-        </div>
+        <div className="selected-appl-bottom">
+          <button onClick={VisitProfile} className="good" id="visit-profile">
+            Visit Profile
+          </button>
 
-        <div className="app-btns">
-          <button className="good">Short-List</button>
-          <button className="good">Hire</button>
-          <button className="bad">Reject</button>
+          <div className="cover-letter2">
+            <textarea
+              disabled
+              hidden={!appl.cover_letter}
+              name=""
+              id=""
+              cols="60"
+              rows="10"
+              value={appl.cover_letter}
+            ></textarea>
+          </div>
+
+          <div
+            hidden={appl.cover_letter}
+            className="selected-appl-bottom-skills"
+          >
+            {skills.map((skill) => (
+              <p>{skill}</p>
+            ))}
+          </div>
+
+          <div className="app-btns">
+            <button onClick={ShortList} className="good">
+              Short-List
+            </button>
+            <button onClick={Hire} className="good">
+              Hire
+            </button>
+            <button onClick={Reject} className="bad">
+              Reject
+            </button>
+          </div>
         </div>
       </div>
     </>
@@ -76,6 +119,24 @@ export default function ManageApplications() {
     Setseleced(appl);
     SetselecedUser(user);
   }
+
+  function DeleteCandidate(e, candidate) {
+    e.preventDefault();
+    //console.log("Deleted candidate : ", candidate);
+    SetCandidates(
+      candidates.map((cand) => {
+        //console.log(cand);
+        try {
+          if (cand.user.userid !== candidate) {
+            return cand;
+          }
+        } catch {}
+      })
+    );
+
+    Setseleced({});
+    SetselecedUser({});
+  }
   useEffect(() => {
     //get applications information
     axios
@@ -86,8 +147,9 @@ export default function ManageApplications() {
       })
       .then((response) => response.data)
       .then((data) => {
-        console.log("Vacancy data  : ", data);
+        //console.log("Vacancy data  : ", data);
         SetCandidates(data.users);
+        //SetselecedUser(data.users[0]);
       })
 
       .catch((err) => {
@@ -95,18 +157,20 @@ export default function ManageApplications() {
       });
   }, [SetCandidates]);
 
+  //console.log("candidates : ", candidates);
+
   return (
     <>
       <Navbar />
       <VacancyNavbar vacaid={vacaid} />
-      <FullApplication appl={selected} user={selectedUser} />
+      <FullApplication
+        appl={selected}
+        user={selectedUser}
+        handleDelete={DeleteCandidate}
+      />
       <div className="app-list">
-        {candidates.map((cand) => (
-          <SingleApp
-            key={cand.userid}
-            infor={cand}
-            handleclick={PopulateFullApp}
-          />
+        {candidates.map((cand, index) => (
+          <SingleApp key={index} infor={cand} handleclick={PopulateFullApp} />
         ))}
       </div>
     </>

@@ -9,6 +9,7 @@ classList.forEach((element) => {
   console.log(element);
 });
 
+
 if (element.innerHTML === "Skills") {
   const toView = document.getElementsByClassName("vaca-manage-skills").item(0);
   console.log(toView);
@@ -29,6 +30,7 @@ if (element.innerHTML === "Skills") {
 }
 
 /////////////////////
+
 <>
   <div className="cs-vaca-infor">
     <h1>{infor.title}</h1>

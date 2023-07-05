@@ -12,7 +12,7 @@ export default function ViewVacancyComonents() {
   const [employer, setEmployer] = useState("");
   const [cover_letter, setCoverLetter] = useState("");
   const [applied, setApplied] = useState(false);
-  const [application, setApplication] = useState(false);
+  const [application, setApplication] = useState({});
 
   function DeleteApplication() {}
   function SubmitApplication(e) {
@@ -54,8 +54,16 @@ export default function ViewVacancyComonents() {
       })
       .then((res) => res.data)
       .then((data) => {
-        //console.log("Vacancy data : ", data);
+        console.log("Vacancy data : ", data);
 
+        if (
+          data.vacancy.candidates.indexOf(localStorage.getItem("userid")) !== -1
+        ) {
+          setApplied(true);
+          console.log("applied : ", applied);
+        } else {
+          setApplied(false);
+        }
         setCoverReq(data.vacancy.cover_letter);
         setInfor(data.vacancy);
         setEmployer(data.vacancy.employer.name);
@@ -64,14 +72,10 @@ export default function ViewVacancyComonents() {
         setDuties(data.vacancy.duties_and_responsibilities);
         //console.log(data.vacancy.candidates);
 
-        setApplied(
-          data.vacancy.candidates.indexOf(localStorage.getItem("userid")) !== -1
-        );
+        console.log("cover req : ", coverReq);
+        console.log("applied : ", applied);
 
-        //console.log("cover req : ", coverReq);
-        //console.log("applied : ", applied);
-
-        if (applied & coverReq) {
+        if (applied) {
           axios
             .get(`http://localhost:5000/app/${infor._id}`, {
               headers: {
@@ -88,9 +92,9 @@ export default function ViewVacancyComonents() {
         }
       })
       .catch((err) => console.log("Vacancy error : ", err));
-  }, [setInfor, coverReq]);
+  }, [setApplication, applied, coverReq]);
 
-  // console.log(duties);
+  console.log(application);
 
   return (
     <>
