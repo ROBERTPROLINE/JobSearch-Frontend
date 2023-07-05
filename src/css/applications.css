@@ -1,0 +1,48 @@
+.app-list {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(3, minmax(250px, 250px));
+    padding-top: 1%;
+}
+
+.applicant-profile {
+    margin: 12px;
+    padding: 2px;
+    border-right: 2px solid blue;
+    border-bottom: 2px solid blue;
+    border-radius: 32px;
+    font-weight: bold;
+    background-color: aliceblue;
+}
+
+.selected-app {
+    margin-top: 1%;
+    left: 60%;
+    position: fixed;
+    border: rgb(172, 172, 233) 2px solid;
+    border-radius: 23px;
+    width: 530px;
+    height: 76%;
+    background-color: aliceblue;
+}
+
+.applicant-profile img {
+    border-radius: 800px;
+}
+
+.cover-letter textarea{
+    border-radius: 12px;
+    border:none;
+    background-color: rgb(178, 185, 190);
+    
+}
+
+.relevant-skills {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.app-btns {
+    display: flex;
+}

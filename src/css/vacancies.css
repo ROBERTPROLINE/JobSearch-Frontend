@@ -1,0 +1,188 @@
+
+
+.vaca-info {
+
+    background-color: white;
+    padding: 9px;
+    width: 550px;
+    border-radius: 10px;
+    margin-top: 65px;
+    display: flex;
+    border-bottom: 3px  rgb(124, 124, 218) solid;
+    box-shadow: 2px  rgba(9, 13, 223, 0.45);
+    box-decoration-break: clone;
+    box-sizing: border-box;
+
+    /*
+    border-top: black solid;
+    box-shadow: 2px 3px 7px 3px rgba(29, 12, 128, 0.9); */
+    overflow: hidden;
+    max-height: 335px;
+    
+}
+
+.job-info {
+    flex-direction: column;
+    width: 400px;
+    border-radius: 13px;
+}
+
+.job-info h4, h3{
+    right: 0;
+    padding: 0;
+    margin: 5px;
+    justify-self: flex-start;
+}
+.employee-info {
+    display: flex;
+    flex-direction: column;
+    justify-self: flex-end;
+}
+
+.employee-details {
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+} 
+
+.employee-details a {
+    color: rgb(5, 42, 54);
+    margin: 2px;
+    text-decoration: dashed;
+    font-weight: bolder;
+}
+.vaca-list {
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 20px;
+    padding-top: 90px;
+    padding-left: 4%;
+    flex-wrap: wrap;
+    
+}
+
+
+.closing-date {
+    border: 1px dotted red;
+    background-color: rgb(228, 180, 180);
+}
+
+
+.job-info button {
+    height: 35px;
+    width: 50%;
+    padding: 0;
+    margin: 3px;
+}
+.App-header-projects {
+    text-decoration: none;
+  color: white;
+   
+}
+
+.job-title  h3{
+    border: 1px dotted blue;
+    background-color: rgb(108, 108, 204);
+}
+
+
+/***
+selected vacany 
+*/
+
+.selected-vaca {
+    border-radius: 20px;
+    font-weight: bold;
+    position: fixed;
+    display: flex;
+    color: azure;
+    box-shadow: 2px 3px 7px 8px rgba(9, 13, 223, 0.45);
+    overflow: hidden;
+    border: none;
+
+    width: fit-content;
+    height: fit-content;
+    justify-content: space-evenly;
+    flex-direction: row;
+    padding-top: 25px;
+    background: white;
+    color: rgb(34, 2, 2);
+    left: 52%;
+    top: 24%;
+    border: 2px rgb(18, 98, 189) solid;
+}
+
+.selected-job-info {
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+}
+
+.selected-job-title h3, h4 {
+    right: 0;
+    padding: 0;
+    margin: 5px;
+    justify-self: flex-start;
+    font-weight: bold;
+
+}
+
+.selected-job-info {
+    border-right: 2px solid blue;
+
+}
+
+.selected-job-employee-info {
+    margin: 5px;
+    border-radius: 14px;
+    border-left: 2px blue solid;
+
+}
+
+
+.selected-vaca button {
+    background-color: rgb(35, 35, 197);
+}
+
+.vaca-info button {
+    background-color: rgb(74, 74, 173);
+}
+
+.employee-info {
+    margin: 5px;
+    border-radius: 14px;
+    border-left: 2px blue solid;
+}
+
+.employee-info p {
+    font-weight: bold;
+}
+
+.selected-employee-add-info a{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+.selected-employee-add-info a {
+    border: 2px dotted rgb(87, 87, 126);
+    background-color: rgb(84, 122, 170);
+    border-radius: 10px;
+    color: white;
+    margin: 15px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: black;
+}
+
+.job-descirption {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 50px;
+}
+

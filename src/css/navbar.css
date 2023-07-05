@@ -1,0 +1,178 @@
+.navbar-nav {
+    width: 100%;
+    position: fixed;
+    height: 55px;
+    top: 0;    
+   
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.navbar-url {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: none;
+    margin-top: 4px;
+    border-radius: 12px;
+}
+
+
+
+.nav-item a{
+    text-decoration: none;
+    color: white;
+
+}
+
+.nav-item:hover{
+    background-color: lightblue;
+}
+
+.logout .lgbtn {
+    width: 100%;
+    background-color: red;
+    
+}
+
+.lgbtn:hover{
+    background-color: darkred;
+}
+
+.searchbar .product-search {
+    font-size: 14px;
+    margin-top: 15px;
+    margin-bottom: 2px;
+    height: 29px;
+    width: 250px;
+    border-radius: 12px;
+    text-decoration: none;
+    border: none;
+    background: white;
+    outline: none;
+    border-bottom: 1px solid blue;
+
+}
+
+.profilepic {
+    border-radius: 300px;
+    top: 0;
+
+}
+
+
+
+.vaca-nav-item {
+    margin: 3px;
+    margin-left: 1px;
+    border-bottom   : 2px dotted blue;
+    border-top   : 1px dotted blue;
+    background-color: #6e5aca;
+    width: 120px;
+    height: 40px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bolder;
+    
+}
+
+.nav-item:hover {
+    cursor: pointer;
+}
+
+
+.profile-info {
+    display: flex;
+    flex-direction: row;
+    border-radius: 12px;
+    background-color: rgb(225, 226, 233);
+    height: 100%;
+}
+
+.profile-name {
+
+    font-size: 14px;
+    font-weight: bolder;
+   
+}
+
+.black-space {
+    position: fixed;
+    width: 100%;
+    bottom: 80%;
+    height: 8.5%;
+    background-color: rgb(255, 255, 255);
+    color: white;
+}
+
+.vaca-nav-item {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.profile-name:hover {
+    cursor: pointer;
+}
+
+.profilepic:hover {
+    cursor: pointer;
+    
+}
+
+
+/*
+vacancy navbar
+*/
+
+.vaca-navbar {
+    padding-top : 4%;
+    
+}
+
+.vaca-navbar-url {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: none;
+    border-radius: 12px;
+    height: 30px;
+    width: fit-content;
+    margin-left: 35%;
+}
+
+.nav-item {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-bottom   : 2px dotted blue;
+    border-top   : 1px dotted blue;
+    width: 120px;
+    height: 40px;
+    border-radius: 10px;
+    font-weight: bolder;
+    background: white;
+}
+
+
+.nav-item a {
+    text-decoration: none;
+    color: blue;
+}
+
+.nav-item a text {
+    color: black;
+    background-color: grey;
+
+}
+
+.profilepic {
+    padding-top: 5px;
+}
+
+.lgbtn {
+    margin: 0;
+    margin-top: 4px;
+  
+}

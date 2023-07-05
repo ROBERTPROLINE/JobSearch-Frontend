@@ -1,0 +1,74 @@
+.about:hover {
+    cursor: pointer;
+    background-color: rgb(170, 167, 167);
+
+    transform: scale(1.1);
+    font-size: 14px;
+}
+
+.about-tiles {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+}
+
+.about {
+    margin-top:20px;
+    width: 400px;
+    height: min-content;
+    border: double;
+    border-radius: 10px;
+    border-color: rgb(10, 243, 243);
+    font-size: 12px;
+}
+
+
+.about-container {
+    padding: 10px;
+    border: double;
+    border-radius: 10px;
+    border-color: rgb(10, 243, 243);
+
+
+    width: 400px;
+    height: max-content;
+
+    margin-top: 10px;
+    display: flex;
+    font-weight: bolder;
+}
+
+label {
+    
+    pointer-events: none;
+}
+
+.form-input {
+    border-radius: 8px;
+    width: 100%;
+    padding: 0;
+    margin: 15px 0;
+    height: 25px;
+    border: none;
+    font-size: 16px;
+    outline: grey;
+}
+
+textarea {
+    border-radius: 10px;
+    padding: 0;
+    width: 90%;
+}
+button {
+    margin: 10px;
+    padding: 0%;
+    color : wheat;
+    background-color: limegreen;
+    width:90%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+}
+

@@ -1,0 +1,177 @@
+.post-vacancies {
+    background-color: white;
+    margin-left: 3%;
+    width: 550px;
+    border-radius: 10px;
+    margin-top: 65px;
+    display: flex;
+    border-bottom: 3px  rgb(124, 124, 218) solid;
+    box-shadow: 2px  rgba(9, 13, 223, 0.45);
+    box-decoration-break: clone;
+    box-sizing: border-box;
+
+    /*
+    border-top: black solid;
+    box-shadow: 2px 3px 7px 3px rgba(29, 12, 128, 0.9); */
+    overflow: hidden;
+
+
+}
+
+
+
+
+.post-data {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgb(250, 253, 253);
+
+}
+
+.section {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-top: 1px;
+    font-weight: bold;
+}
+
+.section2 {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+.section input {
+    background-color: aliceblue;
+    margin-top: 4px;
+    margin-left: 150px;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 13px;
+    border: none;
+    outline: none;
+}
+
+.section select {
+    background-color: aliceblue;
+    margin-top: 4px;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 13px;
+    border: none;
+    outline: none;
+}
+
+.section select option {
+    background-color: aliceblue;
+
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.section textarea {
+    background-color: aliceblue;
+    margin-top: 10px;
+    margin-left: 150px;
+    height: 100px;
+    font-size: 16px;
+    border-radius: 13px;
+    border: none;
+    outline: none;
+}
+
+
+
+.section2 {
+    font-weight: bold;
+}
+
+.section2 input {
+    background-color: aliceblue;
+    width: 20%;
+    height: 20px;
+    font-size: 16px;
+    border-radius: 13px;
+    border: none;
+    outline: none;
+}
+
+
+.section-duration select {
+    background-color: aliceblue;
+    width: 50%;
+    margin-top: 10px;
+    margin-left: 150px;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 13px;
+    border: none;
+    outline: none;
+}
+
+.section-duration select option {
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.post-vacancies .selected-vaca {
+    display: flex;
+    justify-content: space-around;
+
+    width: 34%;
+    left: 64%;
+    top: 19%;
+    height: 50%;
+    border-radius: 20px;
+    font-weight: bold;
+    position: fixed;
+    color: azure;
+    box-shadow: 2px 3px 7px 8px rgba(9, 13, 223, 0.45);
+    overflow: hidden;
+    border: none;
+
+    background: white;
+    color: rgb(34, 2, 2);
+
+    min-height: 50%;
+}
+
+.post-vacancies .selected-vaca .selected-job-info {
+    border-right: none;
+
+}
+
+.post-vacancies .selected-vaca button {
+    position: fixed;
+    width: 10%;
+    bottom: 30%;
+    left: 76%;
+}
+
+.post-vacancies .selected-vaca  textarea {
+    background-color: white;
+    font-size: 16px;
+    border-radius: 13px;
+    border: none;
+    outline: none;
+    font-weight: bolder;
+
+}
+
+.post-vacancies .selected-vaca h3 {
+    border: 1px dotted blue;
+    background-color: rgb(108, 108, 204);
+}

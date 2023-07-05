@@ -1,0 +1,71 @@
+
+button {
+    align-self: flex-end;
+    margin: 10px;
+    color : white;
+    background-color: limegreen;
+    border: none;
+    padding: 10px;
+
+    width: 90%;
+    height: 40px;
+    border-radius: 5px;
+
+}
+
+.loginbtn:hover {
+    cursor: pointer;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+}
+
+.container h1 {
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid silver;
+}
+
+.container form {
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+#id_username {
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 20px 0;
+}
+
+#id_password{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 20px 0;
+}
+
+label {
+    margin-left: 100px;
+    position: absolute;
+    color: #adadad;
+    font-size: 16px;
+    pointer-events: none;
+
+}
+
+.container input {
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
