@@ -7,20 +7,31 @@ import "../../css/applications.css";
 
 function FullApplication({ appl, user, handleDelete }) {
   const [skills, SetSkills] = useState([]);
+  const [status, setStatus] = useState("");
 
   useEffect(() => {
     //console.log("appl on full app : ", appl);
     //console.log("user on full app : ", user);
+    setStatus(appl.status);
     SetSkills(user.skills);
   });
 
   function ShortList(e) {
     e.preventDefault();
     axios
-      .post(`http://localhost:5000/infor/appl/${appl._id}`)
+      .post(
+        `http://localhost:5000/app/${appl._id}`,
+        {},
+        {
+          headers: {
+            authorization: `Bearer ${localStorage.getItem("access")}`,
+          },
+        }
+      )
       .then((response) => response.data)
       .then((data) => {
-        handleDelete(e, user.userid);
+        console.log(data);
+        handleDelete(e, user);
       })
       .catch((err) => {
         console.log(err);
@@ -30,7 +41,24 @@ function FullApplication({ appl, user, handleDelete }) {
   function Reject(e) {
     e.preventDefault();
     console.log("deleting candidate : ", user.userid);
-    handleDelete(e, user.userid);
+    axios
+      .patch(
+        `http://localhost:5000/app/${appl._id}`,
+        {},
+        {
+          headers: {
+            authorization: `Bearer ${localStorage.getItem("access")}`,
+          },
+        }
+      )
+      .then((response) => response.data)
+      .then((data) => {
+        console.log(data);
+        setStatus("Rejected");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }
 
   function Hire(e) {
@@ -43,6 +71,7 @@ function FullApplication({ appl, user, handleDelete }) {
   }
 
   if (!skills) return <></>;
+
   return (
     <>
       <div hidden={!appl._id & !user.userid} className="selected-app">
@@ -50,7 +79,7 @@ function FullApplication({ appl, user, handleDelete }) {
           <img
             width={"150px"}
             height={"120px"}
-            src={`http://localhost:5000/profilepicdl/${user.userid}`}
+            src={`http://localhost:5000/profilepicdl/${user._id}`}
             alt=""
           />
           <h3>{user.fullname}</h3>
@@ -73,27 +102,35 @@ function FullApplication({ appl, user, handleDelete }) {
               id=""
               cols="60"
               rows="10"
-              value={appl.cover_letter}
-            ></textarea>
+              value={appl.cover_letter}></textarea>
           </div>
 
           <div
             hidden={appl.cover_letter}
-            className="selected-appl-bottom-skills"
-          >
+            className="selected-appl-bottom-skills">
             {skills.map((skill) => (
               <p>{skill}</p>
             ))}
           </div>
 
-          <div className="app-btns">
-            <button onClick={ShortList} className="good">
+          <h1 hidden={status === "not seen"}>
+            <h1>{status}</h1>
+          </h1>
+
+          <div
+            className="app-btns"
+            hidden={
+              status === "hired" ||
+              status === "rejected" ||
+              status === "short-listed"
+            }>
+            <button onClick={ShortList} className="good btnbtn">
               Short-List
             </button>
-            <button onClick={Hire} className="good">
+            <button hidden onClick={Hire} className="good btnbtn">
               Hire
             </button>
-            <button onClick={Reject} className="bad">
+            <button onClick={Reject} className="bad btnbtn">
               Reject
             </button>
           </div>
@@ -124,7 +161,7 @@ export default function ManageApplications() {
     e.preventDefault();
     //console.log("Deleted candidate : ", candidate);
     SetCandidates(
-      candidates.map((cand) => {
+      candidates.filter((cand) => {
         //console.log(cand);
         try {
           if (cand.user.userid !== candidate) {

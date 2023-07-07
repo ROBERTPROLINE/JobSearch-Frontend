@@ -5,10 +5,76 @@ import { useState, useEffect } from "react";
 import SingleApp from "./Apps";
 import "../../css/applications.css";
 
-function FullApplication({ appl, user }) {
+function FullApplication({ appl, user, handleDelete }) {
+  const [skills, SetSkills] = useState([]);
+  const [status, setStatus] = useState("");
+
+  useEffect(() => {
+    //console.log("appl on full app : ", appl);
+    //console.log("user on full app : ", user);
+    setStatus(appl.status);
+    SetSkills(user.skills);
+  });
+
+  function ShortList(e) {
+    e.preventDefault();
+    axios
+      .post(
+        `http://localhost:5000/app/${appl._id}`,
+        {},
+        {
+          headers: {
+            authorization: `Bearer ${localStorage.getItem("access")}`,
+          },
+        }
+      )
+      .then((response) => response.data)
+      .then((data) => {
+        console.log(data);
+        setStatus("Short-Listed");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+
+  function Reject(e) {
+    e.preventDefault();
+    console.log("deleting candidate : ", user.userid);
+    axios
+      .patch(
+        `http://localhost:5000/app/${appl._id}`,
+        {},
+        {
+          headers: {
+            authorization: `Bearer ${localStorage.getItem("access")}`,
+          },
+        }
+      )
+      .then((response) => response.data)
+      .then((data) => {
+        console.log(data);
+        setStatus("Rejected");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+
+  function Hire(e) {
+    e.preventDefault();
+  }
+
+  function VisitProfile(e) {
+    e.preventDefault();
+    document.location = `/profile/${user.userid}`;
+  }
+
+  if (!skills) return <></>;
+
   return (
     <>
-      <div hidden={!appl._id} className="selected-app">
+      <div hidden={!appl._id & !user.userid} className="selected-app">
         <div className="applicant-profile-2">
           <img
             width={"150px"}
@@ -21,24 +87,35 @@ function FullApplication({ appl, user }) {
             {user.experience} years experienced {user.profession}
           </h4>
         </div>
-        <button className="good">Visit Profile</button>
 
-        <div className="cover-letter2">
-          <textarea
-            disabled
-            hidden={!appl.cover_letter}
-            name=""
-            id=""
-            cols="60"
-            rows="10"
-            value={appl.cover_letter}
-          ></textarea>
-        </div>
+        <div className="selected-appl-bottom">
+          <button onClick={VisitProfile} className="good" id="visit-profile">
+            Visit Profile
+          </button>
 
-        <div className="app-btns">
-          <button className="good">Short-List</button>
-          <button className="good">Contact</button>
-          <button className="bad">Reject</button>
+          <div className="cover-letter2">
+            <textarea
+              disabled
+              hidden={!appl.cover_letter}
+              name=""
+              id=""
+              cols="60"
+              rows="10"
+              value={appl.cover_letter}></textarea>
+          </div>
+
+          <h1 hidden={status === "not seen"}>
+            <h1>{status}</h1>
+          </h1>
+
+          <div className="app-btns">
+            <button onClick={Hire} className="good btnbtn">
+              Contact
+            </button>
+            <button onClick={Reject} className="bad btnbtn">
+              Reject
+            </button>
+          </div>
         </div>
       </div>
     </>
@@ -61,18 +138,37 @@ export default function ManageApplications() {
     Setseleced(appl);
     SetselecedUser(user);
   }
+
+  function DeleteCandidate(e, candidate) {
+    e.preventDefault();
+    //console.log("Deleted candidate : ", candidate);
+    SetCandidates(
+      candidates.map((cand) => {
+        //console.log(cand);
+        try {
+          if (cand.user.userid !== candidate) {
+            return cand;
+          }
+        } catch {}
+      })
+    );
+
+    Setseleced({});
+    SetselecedUser({});
+  }
   useEffect(() => {
     //get applications information
     axios
-      .get(`http://localhost:5000/infor/short-listed/${vacaid}/`, {
+      .get(`http://localhost:5000/vaca/short-listed/${vacaid}`, {
         headers: {
           authorization: `Bearer ${localStorage.getItem("access")}`,
         },
       })
       .then((response) => response.data)
       .then((data) => {
-        console.log("Vacancy data  : ", data);
+        //console.log("Vacancy data  : ", data);
         SetCandidates(data.users);
+        //SetselecedUser(data.users[0]);
       })
 
       .catch((err) => {
@@ -80,18 +176,20 @@ export default function ManageApplications() {
       });
   }, [SetCandidates]);
 
+  //console.log("candidates : ", candidates);
+
   return (
     <>
       <Navbar />
       <VacancyNavbar vacaid={vacaid} />
-      <FullApplication appl={selected} user={selectedUser} />
+      <FullApplication
+        appl={selected}
+        user={selectedUser}
+        handleDelete={DeleteCandidate}
+      />
       <div className="app-list">
-        {candidates.map((cand) => (
-          <SingleApp
-            key={cand.userid}
-            infor={cand}
-            handleclick={PopulateFullApp}
-          />
+        {candidates.map((cand, index) => (
+          <SingleApp key={index} infor={cand} handleclick={PopulateFullApp} />
         ))}
       </div>
     </>

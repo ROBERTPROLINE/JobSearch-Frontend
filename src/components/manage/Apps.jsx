@@ -1,7 +1,7 @@
 import profile from "../../profile.png";
 
 export default function SingleApp({ infor, handleclick }) {
-  //console.log("single app : ", infor);
+  console.log("single app : ", infor);
 
   if (!infor) {
     return <></>;
@@ -12,7 +12,7 @@ export default function SingleApp({ infor, handleclick }) {
         <img
           width={"110px"}
           height={"90px"}
-          src={`http://localhost:5000/profilepicdl/${infor.user.userid}`}
+          src={`http://localhost:5000/profilepicdl/${infor.user._id}`}
           alt=""
         />
         <p>{infor.user.fullname}</p>
@@ -22,8 +22,7 @@ export default function SingleApp({ infor, handleclick }) {
         </p>
         <button
           className="good"
-          onClick={(e) => handleclick(e, infor.appl, infor.user)}
-        >
+          onClick={(e) => handleclick(e, infor.appl, infor.user)}>
           View
         </button>
       </div>

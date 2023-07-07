@@ -1,254 +1,203 @@
 .nav-h {
-    background-color: antiquewhite;
-    font-weight: bold;
-
+  background-color: antiquewhite;
+  font-weight: bold;
 }
 
 .nav-h:hover {
-    border-bottom: 2px solid rgb(132, 132, 226);
-    border-radius: 12 px;
-    font-weight: bolder;
-    background-color: lightblue;
-    cursor: pointer;
+  border-bottom: 2px solid rgb(132, 132, 226);
+  border-radius: 12 px;
+  font-weight: bolder;
+  background-color: lightblue;
+  cursor: pointer;
 }
 
 .vaca-navbar-nav {
-    border-top: 1px solid blue;
-    border-bottom: 1px solid blue;
+  border-top: 1px solid blue;
+  border-bottom: 1px solid blue;
 
-    border-radius: 12px;
-    display: block;
-    margin-left: 7%;
-    margin-top: 7%;
-    height: fit-content;
+  border-radius: 12px;
+  display: block;
+  margin-left: 7%;
+  margin-top: 7%;
+  height: fit-content;
 }
 
 .manage-vaca {
-    display: flex;
+  display: flex;
 }
 
-.manage-vaca-skills-list{
-    margin-left: 38%;
-    width: 200px;
+.manage-vaca-skills-list {
+  margin-left: 38%;
+  width: 200px;
 }
 
 .manage-vaca-skill {
-    width: fit-content;
-    color: blue;
-    text-decoration: none;
-    font-size: 13px;
-
+  width: fit-content;
+  color: blue;
+  text-decoration: none;
+  font-size: 13px;
 }
 
 .vaca-manage-skills {
-    position: fixed;
-    margin-left: 2%;
-    margin-top: 6%;
-
+  position: fixed;
+  margin-left: 2%;
+  margin-top: 6%;
 }
 
 .newskill input {
-    height: 30px;
-    width: 200px;
-    border: none;
-    border-radius: 120x;
+  height: 30px;
+  width: 200px;
+  border: none;
+  border-radius: 120x;
 }
 
 #hid {
-    visibility: hidden;
+  visibility: hidden;
 }
 
-
-
 .vaca-manage-skills h4 {
-    margin-left: 38%;
-
+  margin-left: 38%;
 }
 
 .vaca-btns {
-    display: flex;
+  display: flex;
 }
 
-.delete:hover{
-    background-color: red;
+.delete:hover {
+  background-color: red;
 }
 
 .vaca-manage-reqs {
-    position: fixed;
-    margin-left: 2%;
-    margin-top: 6%;
-
+  position: fixed;
+  margin-left: 2%;
+  margin-top: 6%;
 }
 .vaca-manage-duties {
-    position: fixed;
-    margin-left: 2%;
-    margin-top: 6%;
-
+  position: fixed;
+  margin-left: 2%;
+  margin-top: 6%;
 }
 .vaca-manage-positions {
-    position: fixed;
-    margin-left: 2%;
-    margin-top: 6%;
-
+  position: fixed;
+  margin-left: 2%;
+  margin-top: 6%;
 }
 
-
 .vaca-manage-positions h4 {
-    margin-left: 38%;
+  margin-left: 38%;
 }
 
 .vaca-manage-duties h4 {
-    margin-left: 38%;
-
+  margin-left: 38%;
 }
 
 .vaca-manage-reqs h4 {
-    margin-left: 38%;
-    
-
+  margin-left: 38%;
 }
 
 .manage-vaca-skill:hover {
-    cursor: pointer;
-    color: red;
-    font-weight: bolder;
+  cursor: pointer;
+  color: red;
+  font-weight: bolder;
 }
 
-
 .vaca-manage-docs {
-    position: fixed;
-    margin-left: 2%;
-    margin-top: 6%;
+  position: fixed;
+  margin-left: 2%;
+  margin-top: 6%;
 }
 
 .vaca-manage-docs h4 {
-    margin-left: 38%;
+  margin-left: 38%;
 }
 
 .vaca-manage-docs button {
-    width: 120px;
-    background-color: blue;
-    margin-left: 48%;
-
+  width: 120px;
+  background-color: blue;
+  margin-left: 48%;
 }
-
 
 .cs-vaca-infor {
-    padding-top: 3%;
-   
+  padding-top: 3%;
 }
 
-
 .cs-vaca-infor-cards {
-    padding-top: 1%;
-    display: flex;
-    justify-content: center;
+  padding-top: 1%;
+  display: flex;
+  justify-content: center;
 }
 
 .cs-vaca-infor-card {
-    margin : 2px;
-    flex-direction: column;
-    flex-wrap: wrap;
-    text-decoration: none;
-    list-style: none;
+  margin: 2px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-decoration: none;
+  list-style: none;
 
-    background-color: rgb(157, 157, 212);
-    border-radius: 12px;
+  background-color: rgb(157, 157, 212);
+  border-radius: 12px;
 
-    overflow: hidden;
-    width: 400px;
-    
+  overflow: hidden;
+  width: 400px;
 }
 
 .cs-vaca-infor-card li {
-    list-style-type: lower-roman;
-    list-style-position: outside;
-    font-weight: bold;
+  list-style-type: lower-roman;
+  list-style-position: outside;
+  font-weight: bold;
 }
 
 .cs-vaca-infor-card h3 {
-    border: 1px solid blue;
-    border-radius: 12px;
+  border: 1px solid blue;
+  border-radius: 12px;
 }
 
 .cover-letter {
-    padding-top: 2%;
-    display: flex;
-    flex-direction: column;
+  padding-top: 2%;
+  display: flex;
+  flex-direction: column;
 }
 
 .cover-letter textarea {
-    width: 700px;
-    margin-left: 27%;
-    font-weight: bolder;
-    color: black;
+  width: 700px;
+  margin-left: 27%;
+  font-weight: bolder;
+  color: black;
 }
 
 .sb {
-    max-width: fit-content;
+  max-width: fit-content;
 }
 
 .not.seen {
-    border: 1px solid blue;
-    border-radius: 12px;
-    background-color: lightblue;
-    width: fit-content;
-    margin-left: 39%;
-    padding: 3px;
-}
-
-.rejected {
-    border: 1px solid blue;
-    border-radius: 12px;
-    background-color:red;
-    width: fit-content;
-    margin-left: 39%;
-    padding: 3px;
-
-}
-
-.accepted {
-    border: 1px solid blue;
-    border-radius: 12px;
-    background-color:rgb(3, 75, 3);
-    width: fit-content;
-    margin-left: 39%;
-    padding: 3px;
-
-}
-
-.short-listed {
-    border: 1px solid blue;
-    border-radius: 12px;
-    background-color:lightgreen;
-    width: fit-content;
-    margin-left: 39%;
-    padding: 3px;
+  border: 1px solid blue;
+  border-radius: 12px;
+  background-color: lightblue;
+  width: fit-content;
+  margin-left: 39%;
+  padding: 3px;
 }
 
 .cover-letter2 textarea {
-    font-weight: bolder;
-    color: black;
-    border-radius: 12px;
-    background-color: grey;
+  font-weight: bolder;
+  color: black;
+  border-radius: 12px;
+  background-color: grey;
 }
 
-
-
-.good:hover{
-    background-color: black;
+.good:hover {
+  background-color: black;
 }
 
 .bad:hover {
-    background-color: red;
+  background-color: red;
 }
 
 .selected-app button {
-    background-color: blue;
-    width: 60%;
+  background-color: blue;
+  width: 60%;
 }
 
 .good {
-    background-color: blue;
+  background-color: blue;
 }
-

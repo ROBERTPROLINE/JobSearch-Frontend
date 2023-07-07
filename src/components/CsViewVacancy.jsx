@@ -14,7 +14,25 @@ export default function ViewVacancyComonents() {
   const [applied, setApplied] = useState(false);
   const [application, setApplication] = useState({});
 
-  function DeleteApplication() {}
+  function DeleteApplication() {
+    axios
+      .delete(`http://localhost:5000/app/${application._id}`, {
+        headers: {
+          authorization: `Bearer ${localStorage.getItem("access")}`,
+        },
+      })
+      .then((response) => response.data)
+      .then((data) => {
+        console.log(data);
+        alert("Application deleted");
+        setApplication({});
+        setApplied(false);
+      })
+      .catch((err) => {
+        //console.log(err.response.data);
+        alert(`Error : ${err.response.data.error}`);
+      });
+  }
   function SubmitApplication(e) {
     e.preventDefault();
     let data = {};
@@ -58,6 +76,14 @@ export default function ViewVacancyComonents() {
 
         if (
           data.vacancy.candidates.indexOf(localStorage.getItem("userid")) !== -1
+        ) {
+          setApplied(true);
+          console.log("applied : ", applied);
+        }
+
+        if (
+          data.vacancy.short_listed.indexOf(localStorage.getItem("userid")) !==
+          -1
         ) {
           setApplied(true);
           console.log("applied : ", applied);
@@ -149,8 +175,7 @@ export default function ViewVacancyComonents() {
           hidden={!infor.cover_letter}
           disabled={applied}
           onChange={(e) => setCoverLetter(e.target.value)}
-          value={cover_letter}
-        ></textarea>
+          value={cover_letter}></textarea>
       </div>
 
       <button hidden={applied} onClick={SubmitApplication} className="sb">

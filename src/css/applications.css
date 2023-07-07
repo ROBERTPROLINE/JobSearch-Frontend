@@ -1,96 +1,137 @@
 .app-list {
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: repeat(3, minmax(250px, 250px));
-    padding-top: 1%;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(3, minmax(250px, 250px));
+  padding-top: 1%;
 }
 
 .applicant-profile {
-    margin: 12px;
-    padding: 2px;
-    border-right: 2px solid blue;
-    border-bottom: 2px solid blue;
-    border-radius: 32px;
-    font-weight: bold;
-    background-color: aliceblue;
+  margin: 12px;
+  padding: 2px;
+  border-right: 2px solid blue;
+  border-bottom: 2px solid blue;
+  border-radius: 32px;
+  font-weight: bold;
+  background-color: aliceblue;
 }
 
 .selected-app {
-    margin-top: 1%;
-    left: 60%;
-    position: fixed;
-    border: rgb(172, 172, 233) 2px solid;
-    border-radius: 23px;
-    width: 520px;
-    height: 76%;
-    background-color: aliceblue;
+  margin-top: 1%;
+  left: 60%;
+  position: fixed;
+  border: rgb(172, 172, 233) 2px solid;
+  border-radius: 23px;
+  width: 520px;
+  height: 76%;
+  background-color: aliceblue;
 }
 
 .applicant-profile img {
-    border-radius: 800px;
-    margin-left: 25%;
+  border-radius: 800px;
+  margin-left: 25%;
 }
 
-.cover-letter textarea{
-    border-radius: 12px;
-    border:none;
-    background-color: rgb(178, 185, 190);
-    
+.cover-letter textarea {
+  border-radius: 12px;
+  border: none;
+  background-color: rgb(178, 185, 190);
 }
 
 .relevant-skills {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
-
-.app-btns {
-    display: flex;
-}
-
 
 .applicant-profile {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
 }
-
-
 
 .selected-appl-bottom {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 60%;
+  flex-direction: column;
+  justify-content: space-between;
 }
-
-
 
 #visit-profile {
-    align-self: center;
+  align-self: center;
 }
 
-
 .applicant-profile-2 {
-    max-height: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  max-height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .applicant-profile-2 img {
-    align-self: center;
-    border-radius: 900px;
+  align-self: center;
+  border-radius: 900px;
 }
 
 .selected-appl-bottom-skills {
-    display: flex;
-   flex-wrap: wrap;
-    justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .selected-appl-bottom-skills p {
-    margin-left: 10px;
-    font-weight: bold;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.Hired {
+  background-color: green;
+  border-radius: 22px;
+}
+
+.Rejected {
+  border-radius: 22px;
+  background-color: red;
+}
+
+.app-btns button {
+  width: 100px;
+  margin-bottom: 23px;
+}
+
+.hired {
+  background-color: green;
+  width: fit-content;
+  margin-left: 39%;
+  padding: 3px;
+}
+
+.rejected {
+  border: 1px solid blue;
+  background-color: red;
+  width: fit-content;
+  margin-left: 39%;
+  padding: 3px;
+}
+
+.accepted {
+  border: 1px solid blue;
+  border-radius: 12px;
+  background-color: rgb(3, 75, 3);
+  width: fit-content;
+  margin-left: 39%;
+  padding: 3px;
+}
+
+.short-listed {
+  border: 1px solid blue;
+  background-color: rgb(118, 11, 218);
+  width: fit-content;
+  margin-left: 39%;
+  padding: 3px;
+}
+
+.not-seen {
+  border: 1px solid rgb(20, 20, 20);
+  width: fit-content;
+  margin-left: 39%;
+  padding: 3px;
 }
