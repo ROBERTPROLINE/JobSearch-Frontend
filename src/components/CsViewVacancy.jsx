@@ -79,9 +79,7 @@ export default function ViewVacancyComonents() {
         ) {
           setApplied(true);
           console.log("applied : ", applied);
-        }
-
-        if (
+        } else if (
           data.vacancy.short_listed.indexOf(localStorage.getItem("userid")) !==
           -1
         ) {

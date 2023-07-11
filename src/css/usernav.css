@@ -1,0 +1,79 @@
+.user-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  justify-self: flex-start;
+  text-align: start;
+  margin-left: 20px;
+  background-color: rgb(151, 151, 214);
+
+  width: fit-content;
+  height: fit-content;
+  margin-top: 7%;
+
+  border-radius: 20px;
+  position: fixed;
+
+  font-weight: bold;
+}
+
+.user-nav a {
+  text-decoration: none;
+}
+
+.user-nav-sec {
+  display: flex;
+  margin: 10px;
+  padding: 10px;
+  width: 200px;
+}
+
+.user-nav-sec img {
+  width: 40px;
+  height: 50px;
+}
+
+.user-nav-sec p {
+  padding-left: 15px;
+}
+
+.user-nav-sec:hover {
+  cursor: pointer;
+  border: 1px solid blue;
+  border-radius: 12px;
+}
+
+.user-personal-infor {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  margin-left: 30%;
+  margin-top: 7%;
+
+  border-radius: 20px;
+
+  width: 50%;
+  text-align: center;
+  background: linear-gradient(rgb(178, 178, 224), rgb(224, 224, 233));
+}
+
+.user-account-pic {
+  width: 150px;
+  border-radius: 800px;
+  height: 120px;
+}
+
+.pen-image {
+  margin-left: -29px;
+  background-color: black;
+  height: 30px;
+}
+
+.social-fb {
+  display: flex;
+  align-self: center;
+}
+
+.social-fb img {
+  height: 30px;
+}

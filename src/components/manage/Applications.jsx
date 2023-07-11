@@ -79,7 +79,7 @@ function FullApplication({ appl, user, handleDelete }) {
           <img
             width={"150px"}
             height={"120px"}
-            src={`http://localhost:5000/profilepicdl/${user._id}`}
+            src={`http://localhost:5000/profilepicdl/${user.userid}`}
             alt=""
           />
           <h3>{user.fullname}</h3>

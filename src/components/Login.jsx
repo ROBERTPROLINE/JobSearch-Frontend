@@ -33,8 +33,8 @@ export default function Login() {
         }
       })
       .catch((err) => {
-        alert(err.error);
-        //console.log(err);
+        //alert(err);
+        alert(err.response.data.error);
       });
   }
   return (
@@ -60,8 +60,7 @@ export default function Login() {
           className="loginbtn"
           disabled={!username || !password}
           value="submit"
-          onClick={submit}
-        >
+          onClick={submit}>
           Login
         </button>
       </form>

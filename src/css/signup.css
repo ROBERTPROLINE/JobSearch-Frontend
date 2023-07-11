@@ -1,192 +1,179 @@
-
 .co {
-    margin: 0;
-    padding: 0;
-    font-family: montserrat;
-    background : linear-gradient(120deg, #2980b9, #ac06f3);
-    height: 100vh;
-
+  margin: 0;
+  padding: 0;
+  font-family: montserrat;
+  background: linear-gradient(120deg, #2980b9, #ac06f3);
+  height: 100vh;
 }
 
 button {
-    align-self: flex-end;
-    margin: 10px;
-    color : white;
-    background-color: limegreen;
-    border: none;
-    padding: 10px;
+  align-self: flex-end;
+  margin: 10px;
+  color: white;
+  background-color: limegreen;
+  border: none;
+  padding: 10px;
 
-    width: 90%;
-    height: 40px;
-    border-radius: 5px;
-
+  width: 90%;
+  height: 40px;
+  border-radius: 5px;
 }
 
 .loginbtn:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .container1 {
-   
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 400px;
-    background: white;
-    border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background: white;
+  border-radius: 10px;
 }
 
 .container h1 {
-    text-align: center;
-    padding: 0 0 20px 0;
-    border-bottom: 1px solid silver;
+  text-align: center;
+  padding: 0 0 20px 0;
+  border-bottom: 1px solid silver;
 }
 
 .container form {
-    padding: 0 40px;
-    box-sizing: border-box;
+  padding: 0 40px;
+  box-sizing: border-box;
 }
 
 #id_username {
-    position: relative;
-    border-bottom: 2px solid #adadad;
-    margin: 20px 0;
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin: 20px 0;
 }
 
-#id_password1{
-    position: relative;
-    border-bottom: 2px solid #adadad;
-    margin: 20px 0;
+#id_password1 {
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin: 20px 0;
 }
 
-
-#id_password2{
-    position: relative;
-    border-bottom: 2px solid #adadad;
-    margin: 20px 0;
+#id_password2 {
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin: 20px 0;
 }
 
-
-#id_email{
-    position: relative;
-    border-bottom: 2px solid #adadad;
-    margin: 20px 0;
+#id_email {
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin: 20px 0;
 }
 
 label {
-
-    position: absolute;
-    color: #adadad;
-    font-size: 16px;
-    pointer-events: none;
-
+  position: absolute;
+  color: #adadad;
+  font-size: 16px;
+  pointer-events: none;
 }
 
 .container1 input {
-    width: 100%;
-    padding: 0 5px;
-    height: 40px;
-    font-size: 16px;
-    border: none;
-    background: none;
-    outline: none;
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
 }
 
 .helptext {
-    font-size: 0;
+  font-size: 0;
 }
 
 button {
-    align-self: flex-end;
-    margin: 10px;
-    color : white;
-    background-color: limegreen;
-    border: none;
-    padding: 10px;
+  align-self: flex-end;
+  margin: 10px;
+  color: white;
+  background-color: limegreen;
+  border: none;
+  padding: 10px;
 
-    width: 90%;
-    height: 40px;
-    border-radius: 5px;
-
+  width: 90%;
+  height: 40px;
+  border-radius: 5px;
 }
 
 .otherbtn:hover {
-    cursor: pointer;
-    background-color: rgb(6, 66, 6);
-    transform: scale(1.05);
+  cursor: pointer;
+  background-color: rgb(6, 66, 6);
+  transform: scale(1.05);
 }
 
 .container1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 400px;
-    background: white;
-    border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background: white;
+  border-radius: 10px;
 }
 
 .container1 h1 {
-    text-align: center;
-    padding: 0 0 20px 0;
-    border-bottom: 1px solid silver;
+  text-align: center;
+  padding: 0 0 20px 0;
+  border-bottom: 1px solid silver;
 }
 
 .container1 form {
-    padding: 0 40px;
-    box-sizing: border-box;
+  padding: 0 40px;
+  box-sizing: border-box;
 }
 
 #id_username {
-    position: relative;
-    border-bottom: 2px solid #adadad;
-    margin: 20px 0;
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin: 20px 0;
 }
 
-#id_password1{
-    position: relative;
-    border-bottom: 2px solid #adadad;
-    margin: 20px 0;
+#id_password1 {
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin: 20px 0;
 }
 
-
-#id_password2{
-    position: relative;
-    border-bottom: 2px solid #adadad;
-    margin: 20px 0;
+#id_password2 {
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin: 20px 0;
 }
 
-
-#id_email{
-    position: relative;
-    border-bottom: 2px solid #adadad;
-    margin: 20px 0;
+#id_email {
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin: 20px 0;
 }
 
 label {
-
-    position: absolute;
-    color: #adadad;
-    font-size: 16px;
-    pointer-events: none;
-
+  position: absolute;
+  color: #adadad;
+  font-size: 16px;
+  pointer-events: none;
 }
 
 .container1 input {
-    background-color: aliceblue;
+  background-color: aliceblue;
 
-    width: 100%;
-    padding: 0 5px;
-    height: 40px;
-    font-size: 16px;
-    border: none;
-    background: none;
-    outline: none;
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
 }
 
 .helptext {
-    font-size: 0;
+  font-size: 0;
 }
 
 /*
@@ -194,165 +181,135 @@ personalinfo
 */
 
 .professional-info {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
-
 
 /*
 container 2
 */
 
-
 .container2 {
-    width: 40%;
-    margin-left: 40px;
-    margin-right: 40px;
-    padding: 10px;
-    flex-direction: column;
-    font-weight: bolder;
+  width: 40%;
+  margin-left: 40px;
+  margin-right: 40px;
+  padding: 10px;
+  flex-direction: column;
+  font-weight: bolder;
 }
 
 .container2 form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .container2 button {
-    width: 30%;
-    margin-left: 0px;
-    left: 10%;
+  width: 30%;
+  margin-left: 0px;
+  left: 10%;
 }
 
 .container2 input {
-    background-color: aliceblue;
-    width: 50%;
-    padding: 0 5px;
-    margin-left: 150px;
-    height: 40px;
-    font-size: 16px;
-    border-radius: 13px;
-    border: none;
-    outline: none;
+  background-color: aliceblue;
+  width: 50%;
+  padding: 0 5px;
+  margin-left: 150px;
+  height: 40px;
+  font-size: 16px;
+  border-radius: 13px;
+  border: none;
+  outline: none;
 }
 
 .container2 label {
-    display: flex;
-    visibility: hidden;
-    color: #adadad;
-    font-size: 16px;
-    pointer-events: none;
+  display: flex;
+  visibility: hidden;
+  color: #adadad;
+  font-size: 16px;
+  pointer-events: none;
 }
 
 .card1-image {
-    margin-top: 10px;
-    border-radius: 300%;
-    
+  margin-top: 10px;
+  border-radius: 300%;
 }
-
 
 /*
 profileinfo
 */
 
-.profileinfo {
-    margin-top: 13px;
-    padding-left: 90px;
-    padding-right: 90px;
-    padding-top: 5px;
-    height: 140%;
-    color: rebeccapurple;
-    margin-right: 7%;
-    font-weight: bolder;
-    border: 1px blue solid;
-    border-radius: 20px;
-    flex-wrap: wrap;
-    min-width: 150px;
-    max-width: 300px;
-    max-height: 600px;
-    
-    
-}
-
-
 .newskill {
-    display: flex;
-    flex-direction: row;
-    
+  display: flex;
+  flex-direction: row;
 }
 
 .newskill button {
-    width: fit-content;
-    padding: 10px;
-    margin: 0;
-    background-color: black;
+  width: fit-content;
+  padding: 10px;
+  margin: 0;
+  background-color: black;
 }
 
 .newskill input {
-    width: 50%;
-    margin-left: 150px;
-    outline: none;
-    border-radius: 12px;
-    background-color: antiquewhite;
+  width: 50%;
+  margin-left: 150px;
+  outline: none;
+  border-radius: 12px;
+  background-color: antiquewhite;
 }
 .skills {
-    display: block;
-    flex-direction: row;
-
-    
+  display: block;
+  flex-direction: row;
 }
-.skills button{
-    width: fit-content;
-    height: fit-content;
-    background-color: grey;
-    color: wheat;
+.skills button {
+  width: fit-content;
+  height: fit-content;
+  background-color: grey;
+  color: wheat;
 }
 
 .skills input {
-    width: fit-content;
-    background-color: aliceblue;
-    border-radius: 13px;
-    height: 40px;
-    font-size: 13px;
-    border: none;
-    outline: none;
+  width: fit-content;
+  background-color: aliceblue;
+  border-radius: 13px;
+  height: 40px;
+  font-size: 13px;
+  border: none;
+  outline: none;
 }
 
 .container2 select option {
-    width: 100%;
-    padding: 0 5px;
-    height: 40px;
-    font-size: 16px;
-    border: none;
-    background: none;
-    outline: none;
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
 }
 
 .container2 select {
-    padding: 0 5px;
-    height: 40px;
-    font-size: 14px;
-    border-radius: 13px;
-    border: none;
-    width: 50%;
-    margin-left: 150px;
-    outline: none;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 14px;
+  border-radius: 13px;
+  border: none;
+  width: 50%;
+  margin-left: 150px;
+  outline: none;
 }
 
-
-
 .sskills {
-    display: flex;
-    font-size: 12px;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
+  display: flex;
+  font-size: 12px;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .sskills button {
-    width: fit-content;
-    background-color: purple;
+  width: fit-content;
+  background-color: purple;
 }

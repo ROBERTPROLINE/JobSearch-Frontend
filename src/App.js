@@ -8,6 +8,10 @@ import ViewUpdateVacancy from "./components/ViewUpdateVacancy";
 import MyApplications from "./components/MyApplications";
 import ManageApplications from "./components/manage/Applications";
 import ManageShortListed from "./components/manage/ShortListed";
+import UserAccount from "./components/accounts/UserAccount";
+import PersonalInfor from "./components/accounts/infor/Profile";
+import Professional from "./components/accounts/infor/Professional";
+import Privacy from "./components/accounts/infor/Privacy";
 
 function App() {
   return (
@@ -30,6 +34,10 @@ function App() {
           <Route path="/vacancy/:id" element={<ViewUpdateVacancy />} />
           <Route path="/short-listed/:id" element={<ManageShortListed />} />
           <Route path="/applicants/:id" element={<ManageApplications />} />
+          <Route path="/settings/" element={<UserAccount />} />
+          <Route path="/settings/profile" element={<PersonalInfor />} />
+          <Route path="/settings/professional" element={<Professional />} />
+          <Route path="/settings/privacy" element={<Privacy />} />
         </Routes>
       </Router>
     </div>

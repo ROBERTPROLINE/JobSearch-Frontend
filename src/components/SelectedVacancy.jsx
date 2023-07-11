@@ -53,16 +53,14 @@ export default function SelectedVacancy({ infor, handleClickView }) {
             userid === vaca.employer.id ||
             vaca.candidates.indexOf(localStorage.getItem("userid")) !== -1
           }
-          onClick={loadVacancy}
-        >
+          onClick={loadVacancy}>
           Apply For Job
         </button>
         <button
           hidden={
             vaca.candidates.indexOf(localStorage.getItem("userid")) === -1
           }
-          onClick={loadVacancy}
-        >
+          onClick={loadVacancy}>
           View Application
         </button>
         <button hidden={userid !== vaca.employer.id} onClick={loadVacancy}>
@@ -90,8 +88,7 @@ export default function SelectedVacancy({ infor, handleClickView }) {
 
         <div
           hidden={userid === vaca.employer.id}
-          className="selected-employee-add-info"
-        >
+          className="selected-employee-add-info">
           <a href="#">Visit Profile</a>
           <a href="#"> Company Website</a>
         </div>

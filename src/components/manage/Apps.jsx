@@ -12,7 +12,7 @@ export default function SingleApp({ infor, handleclick }) {
         <img
           width={"110px"}
           height={"90px"}
-          src={`http://localhost:5000/profilepicdl/${infor.user._id}`}
+          src={`http://localhost:5000/profilepicdl/${infor.user.userid}`}
           alt=""
         />
         <p>{infor.user.fullname}</p>

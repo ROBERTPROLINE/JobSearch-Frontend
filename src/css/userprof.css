@@ -1,0 +1,99 @@
+.user-professional-info {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  background: linear-gradient(rgb(178, 178, 224), rgb(224, 224, 233));
+  border-radius: 20px;
+
+  margin-left: 21%;
+  margin-top: 6%;
+
+  width: 78%;
+}
+
+.user-professional-info-container {
+  width: 80%;
+  margin-left: 40px;
+  margin-right: 40px;
+  padding: 1px;
+  flex-direction: column;
+  font-weight: bolder;
+}
+
+.user-professional-info-container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.user-professional-info-container button {
+  margin-left: 0px;
+}
+
+.user-professional-info-container input {
+  background-color: aliceblue;
+  align-self: center;
+  height: 30px;
+  font-size: 15px;
+  border-radius: 13px;
+  border: none;
+  outline: none;
+}
+
+.user-professional-info-container label {
+  display: flex;
+  visibility: hidden;
+  color: #adadad;
+  font-size: 16px;
+  pointer-events: none;
+}
+
+.user-professional-info-container select option {
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.user-professional-info-container select {
+  padding: 0 5px;
+  height: 40px;
+  font-size: 14px;
+  border-radius: 13px;
+  border: none;
+  align-self: center;
+  outline: none;
+}
+
+.info-container-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-btn {
+  width: 40%;
+  align-self: center;
+}
+
+.profileinfo {
+  margin-top: 13px;
+  padding-left: 90px;
+  padding-right: 90px;
+  padding-top: 5px;
+  height: 140%;
+  color: rebeccapurple;
+  margin-right: 7%;
+  font-weight: bolder;
+  border: 1px blue solid;
+  border-radius: 20px;
+  flex-wrap: wrap;
+  max-width: 300px;
+  max-height: 600px;
+}
+
+.selected {
+  background-color: red;
+}
