@@ -2,7 +2,7 @@ import React, { useState, useEffect, Component } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
 import "../css/signup.css";
-import Home from "./Home";
+import Home from "./Vacancies";
 import { render } from "@testing-library/react";
 
 export default function Signup({ level }) {
@@ -33,7 +33,7 @@ export default function Signup({ level }) {
         if (data.access) {
           localStorage.setItem("access", data.access);
           localStorage.setItem("refresh", data.refresh);
-          return (document.location = "/professional-information");
+          return (document.location = "/settings");
         }
         return alert(data.error);
       })

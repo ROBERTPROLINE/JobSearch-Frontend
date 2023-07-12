@@ -1,0 +1,34 @@
+.user-preferences {
+  flex-direction: row;
+  position: fixed;
+  background: linear-gradient(rgb(178, 178, 224), rgb(224, 224, 233));
+  border-radius: 20px;
+
+  margin-left: 29%;
+  margin-top: 7%;
+
+  width: 58%;
+
+  text-align: center;
+}
+
+.user-preferences h2 {
+  background-color: rgb(132, 180, 221);
+}
+
+.info-container-input-pref {
+  font-weight: bold;
+  display: flex;
+
+  margin-left: 25%;
+}
+
+.info-container-input-pref p {
+  margin-left: 12px;
+}
+
+.update-btn {
+  width: 15%;
+  margin-left: 1%;
+  margin-top: 5%;
+}

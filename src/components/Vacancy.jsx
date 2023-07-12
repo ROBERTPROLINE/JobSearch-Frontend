@@ -6,7 +6,7 @@ export default function Vacancy({ infor, handleSelected }) {
   expiry = nd;
   return (
     <>
-      <div className="vaca-info">
+      <div className="vaca-info" onMouseOver={(e) => handleSelected(infor._id)}>
         <div className="job-info">
           <div className="job-title">
             <h3>{infor.title}</h3>

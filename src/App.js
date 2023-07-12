@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
-import Home from "./components/Home";
+import Vacancies from "./components/Vacancies";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
 import PostVacancy from "./components/PostVacancy";
@@ -12,6 +12,10 @@ import UserAccount from "./components/accounts/UserAccount";
 import PersonalInfor from "./components/accounts/infor/Profile";
 import Professional from "./components/accounts/infor/Professional";
 import Privacy from "./components/accounts/infor/Privacy";
+import Preferences from "./components/accounts/infor/Preferences";
+import Help from "./components/accounts/infor/Help";
+import NotFound from "./components/404";
+import Home from "./components/Home";
 
 function App() {
   return (
@@ -19,6 +23,8 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
+
+          <Route path="/vacancies" element={<Vacancies />} />
           <Route path="/login" element={<Login />} />
           <Route path="/create-account" element={<Signup />} />
           <Route
@@ -38,6 +44,9 @@ function App() {
           <Route path="/settings/profile" element={<PersonalInfor />} />
           <Route path="/settings/professional" element={<Professional />} />
           <Route path="/settings/privacy" element={<Privacy />} />
+          <Route path="/settings/preferences" element={<Preferences />} />
+          <Route path="/settings/help" element={<Help />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
     </div>

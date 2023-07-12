@@ -1,6 +1,6 @@
 import profile from "../../icons/profile.png";
 import settings from "../../icons/settings.png";
-import infor from "../../icons/ic_dialog_info.png";
+import infor from "../../icons/ic_menu_notifications.png";
 import "../../css/usernav.css";
 export default function UserNavbar() {
   return (
@@ -19,10 +19,10 @@ export default function UserNavbar() {
           </div>
         </a>
 
-        <a href="">
+        <a href="/settings/preferences">
           <div className="user-nav-sec">
             <img src={infor} alt="" />
-            <p>Preferences</p>
+            <p>Notifications Preferences</p>
           </div>
         </a>
         <a href="/settings/privacy">

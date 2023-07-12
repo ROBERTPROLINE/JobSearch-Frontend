@@ -34,6 +34,9 @@ export default function Navbar({ handleSearch }) {
 
         <div className="profile-info">
           <img
+            onClick={(e) => {
+              document.location = "/settings";
+            }}
             className="profilepic"
             width={"50px"}
             height={"45px"}
@@ -42,12 +45,17 @@ export default function Navbar({ handleSearch }) {
             )}`}
             alt=""
           />
-          <p className="profile-name">{localStorage.getItem("fullname")}</p>
+          <p
+            onClick={(e) => {
+              document.location = "/settings";
+            }}
+            className="profile-name">
+            {localStorage.getItem("fullname")}
+          </p>
           <div className="logout">
             <button
               className="lgbtn"
-              onClick={(e) => (document.location = "/login")}
-            >
+              onClick={(e) => (document.location = "/login")}>
               logout
             </button>
           </div>

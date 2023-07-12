@@ -43,8 +43,22 @@ export default function SelectedVacancy({ infor, handleClickView }) {
         <div className="job-description">
           <p>{vaca.description}</p>
         </div>
+        <div className="job-description">
+          <h4>Requirements</h4>
+          <p>
+            {vaca.requirements.map((req) => (
+              <li>{req}</li>
+            ))}
+          </p>
+        </div>
+        <h4>Skills</h4>
+        <div className="job-skills">
+          {vaca.skills.map((req) => (
+            <p>{req}, </p>
+          ))}
+        </div>
 
-        <div className="job-add-info">
+        <div hidden className="job-add-info">
           <p>{vaca.candidates.length} applied</p>
           <p>{vaca.hired} hired</p>
         </div>

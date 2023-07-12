@@ -5,6 +5,7 @@ import UserNavbar from "../UserNavbar";
 import "../../../css/userprof.css";
 import profile from "../../../icons/profile.png";
 export default function Professional() {
+  document.title = "Professional Information";
   const [account, setAccount] = useState({});
   const [profilepic, setProfilepic] = useState(false);
   const [experience, setExperience] = useState("");
@@ -50,7 +51,6 @@ export default function Professional() {
       .then((resp) => resp.data)
       .then((data) => {
         if (data.success) {
-          return (document.location = "/");
         } else {
           alert(data.error);
         }
@@ -61,7 +61,6 @@ export default function Professional() {
       });
   }
   function loadData() {
-    if (document.title === "create a new account") return;
     axios
       .get("http://localhost:5000/users/account", {
         headers: {
